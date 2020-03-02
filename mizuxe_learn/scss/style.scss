@@ -2,11 +2,11 @@ $primary: #3292a6;
 $primary-overlay: rgba(50, 146, 166, 0.8);
 
 body {
-  margin-top: 0px;
+  margin-top: 80px;
 }
 
 .navbar {
-  box-shadow: 2px 2px 5px $primary;
+  box-shadow: 2px 2px 15px $primary;
   opacity: 0.9;
   background: #fff;
 
@@ -64,4 +64,52 @@ body {
   .mb-resp {
     margin-bottom: 1rem;
   }
+}
+
+/* Animation 
+https://codepen.io/themechills/pen/dMamgG?__cf_chl_jschl_tk__=f627d8ba4e7148ecf0239c270c462e9e31aa153c-1582954718-0-AdEQiItjNjiayfsMGPNjTRJZyU6qXu8LngxbB2jqg9MmqRE8AIbF8W4NxKwLLHOhYaRiQxuBzvMGLLHx-VrWM0uh8lqxEPJ6E_vqma4_RiRAKlP9O8x2tRpKMV7d1W7Ep9F4kbih8O6cNU8uT3Pfu0ZKlrNKFTkISl7dfGFLHMqJ58fA970QWHeOHkAqZerG1JNfNIyNTKEUWVuDPehdjWxBFBH1qY07Za-1lXq-_HK3DBhjTBW8NOm20fILRu46KHn859vlAUwyxSzN81CWECLqUp9B-CqPH6oTjou4Kd_AIPbrlffQOfoDZHQLOruoyfuKeAkD-G_ogyfT7V2tV3Rl7JmRXykV82LwUSKD8lMi
+
+how to use
+
+<div class="animated animatedFadeInUp fadeInUp">
+</div>
+*/
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }
